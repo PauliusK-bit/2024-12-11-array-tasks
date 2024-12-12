@@ -459,3 +459,175 @@ let numbers51 = data.filter(
 );
 console.log(numbers51);
 console.groupEnd();
+
+console.groupCollapsed("Third task");
+// 3.51. Gauti tik skaičius.
+
+let onlyNumbers = data.filter(function (num) {
+  return typeof num === "number";
+});
+console.log(onlyNumbers);
+// 3.52. Gauti tik tekstus (string).
+let onlyText = data.filter(function (text) {
+  return typeof text === "string";
+});
+console.log(onlyText);
+// 3.53. Gauti tik tekstus (string), kurie turi daugiau nei 5 simbolius.
+
+let symbol1 = data.filter(function (text) {
+  return typeof text === "string" && text.length > 5;
+});
+console.log(symbol1);
+
+// 3.54. Gauti tik tekstus (string), kurie turi mažiau arba lygiai 5 simbolius.
+let symbol2 = data.filter(function (text) {
+  return typeof text === "string" && text.length <= 5;
+});
+console.log(symbol2);
+// 3.55. Gauti tik tekstus (string), kurie turi mažiau nei 7 simbolius.
+let symbol3 = data.filter(function (text) {
+  return typeof text === "string" && text.length < 7;
+});
+console.log(symbol3);
+// 3.56. Gauti tik tekstus (string), kurie turi raidę t.
+let symbol4 = data.filter(
+  (letter) => typeof letter === "string" && letter.toLowerCase().includes("t")
+);
+console.log(symbol4);
+// 3.57. Gauti tik tekstus (string), kurie turi raidę y.
+let symbol5 = data.filter(
+  (letter) => typeof letter === "string" && letter.toLowerCase().includes("y")
+);
+console.log(symbol5);
+// 3.58. Gauti tik tekstus (string), kurie turi raides e arba a.
+let symbol6 = data.filter((item) => {
+  return typeof item === "string" && (item.includes("e") || item.includes("a"));
+});
+console.log(symbol6);
+// 3.59. Gauti tik tekstus (string), kurie turi raides t ir i.
+let symbol7 = data.filter((item) => {
+  return typeof item === "string" && item.includes("t") && item.includes("i");
+});
+console.log(symbol7);
+// 3.60. Gauti tik tekstus (string), kurie turi raide t, bet neturi raidės k.
+let symbol8 = data.filter((item) => {
+  return typeof item === "string" && item.includes("t") && !item.includes("k");
+});
+console.log(symbol8);
+// 3.61. Gauti tik tekstus (string), kurie turi raide a, bet neturi raidės s.
+let symbol9 = data.filter((item) => {
+  return typeof item === "string" && item.includes("a") && !item.includes("s");
+});
+console.log(symbol9);
+// 3.62. Gauti tik tekstus (string), kurie turi daugiau nei vieną raidę t.
+let symbol10 = data.filter((item) => {
+  return typeof item === "string" && item.includes("a") && !item.includes("s");
+});
+console.log(symbol10);
+// 3.63. Gauti tik tekstus (string), kurie turi raidžių junginį st.
+let symbol11 = data.filter((item) => {
+  return typeof item === "string" && item.includes("st");
+});
+console.log(symbol11);
+// 3.64. Gauti tik tekstus (string), kurie turi raidžių junginį nd.
+let symbol12 = data.filter((item) => {
+  return typeof item === "string" && item.includes("nd");
+});
+console.log(symbol12);
+// 3.65. Gauti tik tekstus (string), kurie neturi raidės s.
+let symbol13 = data.filter((item) => {
+  return typeof item === "string" && !item.includes("s");
+});
+console.log(symbol13);
+// 3.66. Gauti tik tekstus (string), kurie neturi raidės t.
+let symbol14 = data.filter((item) => {
+  return typeof item === "string" && !item.includes("t");
+});
+console.log(symbol14);
+// 3.67. Gauti tik tekstus (string), kurie neturi raidės r ir l.
+let symbol15 = data.filter((item) => {
+  return typeof item === "string" && !item.includes("r") && !item.includes("l");
+});
+console.log(symbol15);
+// 3.68. Gauti tik tekstus (string), kurie prasideda skaičiumi.
+let symbol16 = data.filter((text) => /^\d/.test(text));
+console.log(symbol16);
+// 3.69. Gauti tik tekstus (string), kurie prasideda raide s.
+let symbol17 = data.filter(
+  (item) => typeof item === "string" && item.startsWith("s")
+);
+console.log(symbol17);
+// 3.70. Gauti tik tekstus (string), kurie prasideda raide o.
+let symbol18 = data.filter(
+  (item) => typeof item === "string" && item.startsWith("o")
+);
+console.log(symbol18);
+// 3.71. Gauti tik tekstus (string), kurie baigiasi raide d.
+let symbol19 = data.filter(
+  (item) => typeof item === "string" && item.endsWith("d")
+);
+console.log(symbol19);
+// 3.72. Gauti tik tekstus (string), kurie baigiasi raide s.
+let symbol20 = data.filter(
+  (item) => typeof item === "string" && item.endsWith("s")
+);
+console.log(symbol20);
+// 3.73. Gauti tik tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o.
+let symbol21 = data.filter(
+  (item) => typeof item === "string" && item.length > 4 && item.includes("s")
+);
+console.log(symbol21);
+// 3.74. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
+let symbol22 = data.filter(
+  (item) => typeof item === "string" && item.length >= 5 && item.includes("a")
+);
+console.log(symbol22);
+// 3.75. Gauti tik tekstus (string), kurie turi porinį simbolių skaičių.
+let symbol23 = data.filter((item) => item.length % 2 === 0);
+console.log(symbol23);
+// 3.76. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
+
+// let symbol24 = data.filter(
+//   (item) => item.length % 2 !== 0 && item.includes("s")
+// );
+// console.log(symbol24);
+
+// 3.77. Gauti tik tekstus (string), kurių trečias simbolis yra a.
+let symbol25 = data.filter((item) => item[2] === "a");
+console.log(symbol25);
+// 3.78. Gauti tik tekstus (string), kurių ketvirtas simbolis yra l.
+let symbol26 = data.filter((item) => item[3] === "l");
+console.log(symbol26);
+// 3.79. Gauti tik tekstus (string), kurių penktas simbolis nėra t ir kurie turi daugiau simbolių nei 4.
+let symbol27 = data.filter((item) => item[4] !== "t" && item.length > 4);
+console.log(symbol27);
+// 3.80. Gauti tik tekstus (string), kurių pirmas simbolis nėra e, kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi.
+let symbol29 = data.filter((item) => item[0] !== "e" && item.length > 6);
+console.log(symbol29);
+console.groupEnd();
+// 4. Tęsiant darbą su ankstesniu masyvu atlikti šias užduotis naudojant for ciklą ir map/forEach metodą. Kiekvieną užduotį atlikti abiem būdais (for ciklu ir map/forEach metodu). Visus narius išvesti į konsole pagal žemiau pateiktas sąlygas:
+// 4.1. Tik skaičius (number tipo duomenis).
+// 4.2. Tik tekstą (string tipo duomenis).
+// 4.3. Tik skaičius (number tipo duomenis) ir juos pakelti 4-tuoju laipsniu.
+// 4.4. Tik skaičius (number tipo duomenis) ir prie jų pridėti 55.
+// 4.5. Tik skaičius (number tipo duomenis) ir juos padalinti iš 2.
+// 4.6. Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".
+// 4.7. Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais, pvz.:
+//   "Index: 0, Number: 2"
+//   "Index: 1, Number: 3"
+//   "Index: 2, Number: 5"
+//   Ir t.t.
+// 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
+// 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
+//   - Pirmo skaičiaus dauginti nereikia.
+//   - Antrą skaičių dauginti iš pirmo.
+//   - Trečią skaičių dauginti iš antro.
+//   - Ketvirta skaičių dauginti iš trečio.
+//   - Penktą skaičių dauginti iš ketvirto.
+//   Ir t.t.
+// 4.10. Tik tuos skaičius (number tipo duomenis), kuriuos padauginus iš 5, atsakymas gaunasi didesnis už 350.
+// 4.11. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti kiek simbolių jis turi, pvz. "Start has 5 symbols".
+// 4.12. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio raidę išskiriant brūkšniu ir paverčiant ją didžiąja raide, pvz.: "S-T-A-R-T".
+// 4.13. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio pirmą ir trečią raidę pakeičiant brūkšniu (underscore), pvz.: "_t_rt";
+// 4.14. Tik tekstą (string tipo duomenis), tačiau žodį parašant atvirkščiai, pvz.: vietoje "start" parašyti "trats";
+// 4.15. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti tarp kokių narių masyve jis yra, pvz.: "Word obuolys is between -5564 and -51 in the array".
