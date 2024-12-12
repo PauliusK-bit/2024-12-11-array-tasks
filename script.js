@@ -605,18 +605,88 @@ console.log(symbol27);
 let symbol29 = data.filter((item) => item[0] !== "e" && item.length > 6);
 console.log(symbol29);
 console.groupEnd();
+
 // 4. Tęsiant darbą su ankstesniu masyvu atlikti šias užduotis naudojant for ciklą ir map/forEach metodą. Kiekvieną užduotį atlikti abiem būdais (for ciklu ir map/forEach metodu). Visus narius išvesti į konsole pagal žemiau pateiktas sąlygas:
 // 4.1. Tik skaičius (number tipo duomenis).
+console.groupCollapsed("Tik skaičius (number tipo duomenis).");
+for (let i = 0; i < data.length; i++) {
+  let item = data[i];
+  if (typeof item === "number") {
+    console.log(item);
+  }
+}
+console.groupEnd();
 // 4.2. Tik tekstą (string tipo duomenis).
+console.groupCollapsed("Tik tekstą (string tipo duomenis).");
+for (let i = 0; i < data.length; i++) {
+  let item = data[i];
+  if (typeof item === "string") {
+    console.log(item);
+  }
+}
+console.groupEnd();
 // 4.3. Tik skaičius (number tipo duomenis) ir juos pakelti 4-tuoju laipsniu.
+console.groupCollapsed(
+  "Tik skaičius (number tipo duomenis) ir juos pakelti 4-tuoju laipsniu."
+);
+for (let i = 0; i < data.length; i++) {
+  let item = data[i];
+  if (typeof item === "number") {
+    console.log(item ** 4);
+  }
+}
+console.groupEnd();
 // 4.4. Tik skaičius (number tipo duomenis) ir prie jų pridėti 55.
+
+console.groupCollapsed(
+  "Tik skaičius (number tipo duomenis) ir prie jų pridėti 55."
+);
+for (let i = 0; i < data.length; i++) {
+  let item = data[i];
+  if (typeof item === "number") {
+    console.log(item + 55);
+  }
+}
+console.groupEnd();
 // 4.5. Tik skaičius (number tipo duomenis) ir juos padalinti iš 2.
+
+console.groupCollapsed(
+  "Tik skaičius (number tipo duomenis) ir juos padalinti iš 2."
+);
+for (let i = 0; i < data.length; i++) {
+  let item = data[i];
+  if (typeof item === "number") {
+    console.log(item / 2);
+  }
+}
+console.groupEnd();
 // 4.6. Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".
+console.groupCollapsed(
+  'Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".'
+);
+for (let i = 0; i < data.length; i++) {
+  let item = data[i];
+  if (typeof item === "number") {
+    console.log("Number: 2", item);
+  }
+}
+console.groupEnd();
 // 4.7. Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais, pvz.:
 //   "Index: 0, Number: 2"
 //   "Index: 1, Number: 3"
 //   "Index: 2, Number: 5"
 //   Ir t.t.
+console.groupCollapsed(
+  "Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais"
+);
+for (let i = 0; i < data.length; i++) {
+  if (typeof data[i] === "number") {
+    console.log(`Index: ${i}, Number: ${data[i]}`);
+  }
+}
+
+console.groupEnd();
+
 // 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
 // 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
 //   - Pirmo skaičiaus dauginti nereikia.
