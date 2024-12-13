@@ -688,6 +688,14 @@ for (let i = 0; i < data.length; i++) {
 console.groupEnd();
 
 // 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
+console.groupCollapsed(
+  "Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso."
+);
+data.forEach((num, index) => {
+  let result = num * index;
+  console.log(`Number: ${num}, Index: ${index}, Result: ${result}`);
+});
+console.groupEnd();
 // 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
 //   - Pirmo skaičiaus dauginti nereikia.
 //   - Antrą skaičių dauginti iš pirmo.
@@ -695,9 +703,45 @@ console.groupEnd();
 //   - Ketvirta skaičių dauginti iš trečio.
 //   - Penktą skaičių dauginti iš ketvirto.
 //   Ir t.t.
+console.groupCollapsed(
+  "Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario"
+);
+for (let i = 1; i < data.length; i++) {
+  const result = data[i] * data[i - 1];
+  console.log(
+    `Number: ${data[i]}, Previous number: ${data[i - 1]}, Result: ${result}`
+  );
+}
+
+console.groupEnd();
+
 // 4.10. Tik tuos skaičius (number tipo duomenis), kuriuos padauginus iš 5, atsakymas gaunasi didesnis už 350.
+
+console.groupCollapsed(
+  "Tik tuos skaičius (number tipo duomenis), kuriuos padauginus iš 5, atsakymas gaunasi didesnis už 350."
+);
+
+data.forEach((number) => {
+  const result = number * 5;
+  if (result > 350) {
+    console.log(`Number: ${number}, Result: ${result}`);
+  }
+});
+console.groupEnd();
 // 4.11. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti kiek simbolių jis turi, pvz. "Start has 5 symbols".
+
+console.groupCollapsed(
+  'Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti kiek simbolių jis turi, pvz. "Start has 5 symbols".'
+);
+
+data.forEach((element) => {
+  if (typeof element === "string") {
+    console.log(`${element} has ${element.length} symbols`);
+  }
+});
+console.groupEnd();
 // 4.12. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio raidę išskiriant brūkšniu ir paverčiant ją didžiąja raide, pvz.: "S-T-A-R-T".
+
 // 4.13. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio pirmą ir trečią raidę pakeičiant brūkšniu (underscore), pvz.: "_t_rt";
 // 4.14. Tik tekstą (string tipo duomenis), tačiau žodį parašant atvirkščiai, pvz.: vietoje "start" parašyti "trats";
 // 4.15. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti tarp kokių narių masyve jis yra, pvz.: "Word obuolys is between -5564 and -51 in the array".
